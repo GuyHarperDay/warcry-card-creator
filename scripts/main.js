@@ -68,7 +68,7 @@ drawPointCost = function (value) {
 };
 
 drawName = function (value) {
-  writeScaled(value, { x: 805, y: 60 });
+  writeScaled(value, { x: 807, y: 62 });
 };
 
 getWeaponStatblockImage = function () {
