@@ -591,12 +591,13 @@ function getLatestFighterDataName() {
 
 window.onload = function () {
   //window.localStorage.clear();
+  var fighterData = loadLatestFighterData();
+  writeControls(fighterData);
+  render(fighterData);
+  refreshSaveSlots();
   setTimeout(() => {
-    var fighterData = loadLatestFighterData();
-    writeControls(fighterData);
     render(fighterData);
-    refreshSaveSlots();
-  }, 1000);
+  }, 500);
 };
 
 onAnyChange = function () {
