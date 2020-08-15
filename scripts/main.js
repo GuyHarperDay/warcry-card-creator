@@ -596,7 +596,7 @@ window.onload = function () {
     writeControls(fighterData);
     render(fighterData);
     refreshSaveSlots();
-  }, 500);
+  }, 1000);
 };
 
 onAnyChange = function () {
