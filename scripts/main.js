@@ -68,7 +68,7 @@ drawPointCost = function (value) {
 };
 
 drawName = function (value) {
-  writeScaled(value, { x: 810, y: 65 });
+  writeScaled(value, { x: 790, y: 95 });
 };
 
 getWeaponStatblockImage = function () {
@@ -412,13 +412,15 @@ render = function (fighterData) {
 
   drawPointCost(fighterData.pointCost);
 
-  getContext().textBaseline = 'top';
-  getContext().textAlign = 'left';
-  getContext().fillStyle = '#322f31';
-
   getContext().font = '30px frizquadrata-bt';
   getContext().fillStyle = '#FFF000';
   drawName(fighterData.name);
+
+  getContext().font = '50px frizquadrata-bt';
+
+  getContext().textBaseline = 'top';
+  getContext().textAlign = 'left';
+  getContext().fillStyle = '#322f31';
 
   if (fighterData.weapon1.enabled && fighterData.weapon2.enabled) {
     drawWeapon(fighterData.weapon1, { x: 29, y: 397 });
