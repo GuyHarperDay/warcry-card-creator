@@ -67,6 +67,10 @@ drawPointCost = function (value) {
   writeScaled(value, { x: 494, y: 90 });
 };
 
+drawName = function (value) {
+  writeScaled(value, { x: 750, y: 75 });
+};
+
 getWeaponStatblockImage = function () {
   return document.getElementById('weaponStatBlock');
 };
@@ -407,6 +411,11 @@ render = function (fighterData) {
   getContext().textAlign = 'center';
 
   drawPointCost(fighterData.pointCost);
+
+  getContext().font = '18px frizquadrata-bt';
+  drawName(fighterData.name);
+
+  getContext().font = '50px frizquadrata-bt';
 
   getContext().textBaseline = 'top';
   getContext().textAlign = 'left';
